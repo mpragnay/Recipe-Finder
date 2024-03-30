@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="recipesPageContainer" class="d-flex flex-column justify-content-center bg-container p-1">
+        <div class="text-center mb-3">
+            <h1>Ingredients List</h1>
+            <br>
+            <p id="websiteDescription">You have a bunch of ingredients but not able to think of a good recipe to make. That's what 
+                this website is for. Enter a bunch of ingredients and get suggestions of upto 15 recipes you might wanna make.</p>
+            <br>
+            <br>
+        </div>
+        <div id="ingredientsContainer" class="text-center mb-3"></div>
+        <div class="text-center mb-3">
+            <input id="ingredientInput" class="mr-3" placeholder="Enter ingredient of choice"/>
+            <button id="Add" onclick="addIngredient()" class="add-btn">Add</button>
+        </div>
+        <div class="text-center mb-5">
+            <button onclick="searchRecipe()" class="search-btn">Search</button>
+        </div>
+        <!-- <div id="recipesContainer" class="text-left"></div> -->
+    </div>
+    <script src="/static/script.js"></script>
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+</html>
