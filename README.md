@@ -1,9 +1,9 @@
-## Recipe Finder Website
+# Recipe Finder Website
 
-# Motivation
+## Motivation
 I have seen many repositories on recipe-finder websites, but none of them were based on ingredients search. And all of them used some or the other API like edamam etc. In-order to make it a challenge, I decided to not use an API.
 
-# Overview
+## Overview
 Instead of searching for a dish according to it's name, I am asking for some ingredients and suggesting possible dishes that can be made using these ingredients. 
 For this project I am using the Recipe Dataset (over 2M) Food publicly available on kaggle. 
 https://www.kaggle.com/datasets/wilmerarltstrmberg/recipe-dataset-over-2m/data
