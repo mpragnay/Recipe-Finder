@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import pandas as pd
 
 # app instance will be created when the module is imported, regardless of whether it is executed directly or imported as a module by another script
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 df = pd.read_csv('recipes_data.csv')
 
@@ -27,8 +27,8 @@ def search_recipes():
             recipe_inds.append(i)
 
     if len(recipe_inds):
-        if len(recipe_inds)>15:
-            recipe_inds=recipe_inds[:15]
+        if len(recipe_inds)>display_max_recipes:
+            recipe_inds=recipe_inds[:display_max_recipes]
         titles=[df['title'][i] for i in recipe_inds]
         ingredient_req=[df['ingredients'][i] for i in recipe_inds]
         directions=[df['directions'][i] for i in recipe_inds]
