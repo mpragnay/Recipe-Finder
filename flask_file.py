@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 
+# app instance will be created when the module is imported, regardless of whether it is executed directly or imported as a module by another script
 app = Flask(__name__)
 
 df = pd.read_csv('recipes_data.csv')
@@ -35,6 +36,6 @@ def search_recipes():
     else:
         return jsonify({'message': 'No recipes found.'}), 404
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     app.run(debug=False,host='0.0.0.0')
     # app.run(debug=True)
-    app.run(debug=False,host='0.0.0.0')
