@@ -9,7 +9,7 @@ For this project I am using a mixture of web scraped recipes off of cookbooks.co
 https://www.kaggle.com/datasets/wilmerarltstrmberg/recipe-dataset-over-2m/data
 Since the dataset file size is very big I couldn't include it here, you can clone my repo and download the dataset from above link. 
 Make sure to name the file as recipes_data.csv
-I am instead using a smaller version of the dataset within 25mb.
+I am instead using a smaller version of the dataset within 25mb. Also I implemented the integration with computer vision model for processing ingredients with a single top view image
 
 ## Deployment using WSGI server
 For local deployment running the flask app is enough, but to deploy on netlify, I used Gunicorn. The gunicorn.conf file serves for the important configurations and location of my flask app.
